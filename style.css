@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+html {
+  background: #181a15;
+}
+
+h1,
+footer {
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  display: grid;
+  grid-template-columns: 600px 100px;
+  grid-template-rows: 50px 200px 200px 20px;
+  row-gap: 10px;
+  grid-template-areas:
+    "header header"
+    "first-slider first-slider"
+    "second-slider slider-control"
+    "footer footer";
+}
+
+.header {
+  grid-area: header;
+  margin: 0;
+}
+.first-slider {
+  grid-area: first-slider;
+}
+.second-slider {
+  grid-area: second-slider;
+}
+.slider-control {
+  grid-area: slider-control;
+}
+.footer {
+  grid-area: footer;
+}
+
+.first-slider .slider {
+  width: 1000px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  direction: rtl;
+}
+
+.first-slider .slider ul {
+  position: relative;
+  width: 1345px;
+  margin: 0;
+}
+
+.second-slider .slider {
+  width: 630px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  direction: rtl;
+}
+
+.second-slider .slider ul {
+  position: relative;
+  width: 780px;
+  margin: 0;
+}
+
+.slider ul li {
+  list-style-type: none;
+  float: left;
+}
+
+.slider img {
+  height: 200px;
+  border-radius: 10px;
+  margin: 0 5px;
+}
+
+.prev,
+.next {
+  margin-left: 49px;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
